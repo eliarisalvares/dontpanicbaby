@@ -38,3 +38,8 @@ jobs:
         
       - name: Run Jest Tests
         run: yarn tests
+        
+      - name: Checks linter result
+        run: |
+          echo "Result"
+          [[ $ERRORS == 0 ]]
