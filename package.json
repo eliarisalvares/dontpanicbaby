@@ -1,0 +1,22 @@
+{
+  "name": "dontpanic_baby",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "tests": "jest --watchAll",
+    "build": "mkdir -p dist && cp -R src dist && yarn --nolockfile --modules-folder ./dist/node_modules --production=true",
+    "start": "node dist/src/server.js"
+  },
+  "dependencies": {
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  }
+}

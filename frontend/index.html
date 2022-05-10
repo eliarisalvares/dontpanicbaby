@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Don't_Panic_Baby</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+	<header>
+		<div class="Title" > 
+		<h1 style="background-color: transparent;">Don't Panic Baby</h1>
+	</div>
+	<div class="rg">
+		<p><strong>Regras do jogo:</strong></p>
+	</div>
+	<div class="Rules">
+		<p>- Chute uma equação que resulte em 42. <br>- Só são permitidos os operadores 
+			"+", "-", "/" e "*".</br> - Sua equação deve ter 6 caracteres entre dígitos
+			e operadores.
+			</p>
+		<p>
+			- Se o caractere existir na equação, um <strong>"T"</strong> será exibido na posição
+			correspondente.</br>
+			- Se o caracter não existir na equação, será exibido na posição correspondente
+			um <strong>"X"</strong>.</br>
+			- Se o caractere existir e estiver na posição correta, um <strong>"C"</strong> será exibido
+			na posição correspondente.
+		</p>
+	</div>
+	</header>
+	<main>
+		<div class="Container">
+			<h1>Chute uma equação</h1>
+			<form  class="form">
+				<input type="text" id="value1" class="formInput" autocomplete="off" maxlength="1" onkeyup="moveToNext('value1', 'value2')"/>
+				<input type="text" id="value2" class="formInput" autocomplete="off" maxlength="1" onkeyup="moveToNext('value2', 'value3')"/>
+				<input type="text" id="value3" class="formInput" autocomplete="off" maxlength="1" onkeyup="moveToNext('value3', 'value4')"/>
+				<input type="text" id="value4" class="formInput" autocomplete="off" maxlength="1" onkeyup="moveToNext('value4', 'value5')"/>
+				<input type="text" id="value5" class="formInput" autocomplete="off" maxlength="1" onkeyup="moveToNext('value5', 'value6')"/>
+				<input type="text" id="value6" class="formInput" autocomplete="off" maxlength="1" onkeyup="moveToNext('value6', 'value1')"/>
+				
+			</form>
+			<div class="divButton">
+				<button class="Button" onClick="getForm()"> CHUTAR </button>
+
+			</div>
+			<form class="form" >
+				<input type="text" id="res1" class="formInput" maxlength="1" readonly/>
+				<input type="text" id="res2" class="formInput" maxlength="1" readonly/>
+				<input type="text" id="res3" class="formInput" maxlength="1" readonly/>
+				<input type="text" id="res4" class="formInput" maxlength="1" readonly/>
+				<input type="text" id="res5" class="formInput" maxlength="1" readonly/>
+				<input type="text" id="res6" class="formInput" maxlength="1" readonly/>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<div class="footer">
+
+				<p>Feito com amor pelos cadetes da 42SP.</p>
+				<a class="logoGithub" href="https://github.com/42sp/42labs-dontpanic_baby-10507192/blob/main/README.md">Leia Mais: <img  alt="logo github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&color=0e0e0f"/> </a>
+
+		</div>
+	</footer>
+	</body>
+</html>

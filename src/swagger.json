@@ -1,0 +1,74 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Don't Panic, Baby",
+		"version": "1.0.0",
+		"description": "\"Don't Panic, Baby\" was the first project of the setup phase from Astrea team in the second edition of 42Labs."
+	},
+	"schemes": ["http"],
+	"consumes": ["JSON"],
+	"servers": [
+		{
+			"url": "http://localhost:3333/",
+			"description": "Main Route"
+		}
+	],
+	"paths":{
+		"/": {
+			"post":{
+				"summary": "Guess an equation",
+				"description": "Guess an equation",
+				"responses":{
+					"400": {
+						"description": "Bad Request",
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"message": {
+										"type": "string",
+										"description": "a brief description of what went wrong"
+									}
+								}
+							}
+						}
+					},
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"response": {
+											"type": "string",
+											"description": "Program's response about the guess"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"requestBody": {
+					"content":{
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"str": {
+										"type": "string",
+										"description": "Guess"
+									}
+								},
+								"example": {
+									"str": "6*6+06"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
