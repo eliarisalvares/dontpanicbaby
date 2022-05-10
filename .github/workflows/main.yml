@@ -34,9 +34,7 @@ jobs:
           node-version: 14
 
       - name: Install all dependencies
-        run: sudo apt update && sudo apt install yarn nodejs -y
-            yarn
-            yarn build
+        run: yarn install
         
       - name: Run Jest Tests
         run: yarn tests
