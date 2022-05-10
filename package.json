@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "nodemon src/server.js",
-    "tests": "jest",
+    "tests": "jest --watchAll",
     "build": "mkdir -p dist && cp -R src dist && yarn --nolockfile --modules-folder ./dist/node_modules --production=true",
     "start": "node dist/src/server.js"
   },
