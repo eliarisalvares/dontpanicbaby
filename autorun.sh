@@ -13,3 +13,4 @@ sudo yarn global add http-server --prefix /usr/local
 x-terminal-emulator -e yarn start
 firefox http://localhost:8080 &
 cd frontend && http-server
+
