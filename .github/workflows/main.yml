@@ -5,9 +5,9 @@ name: Jest Automatic Testing
 # For more detail visit https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#on
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 # The jobs this action will run. You can write as many jobs as you want.
 # For more detail on this section visit https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs
