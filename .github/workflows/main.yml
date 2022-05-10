@@ -1,27 +1,23 @@
-# Name of this action
-name: Jest Automatic Testing
+# This is a basic workflow to help you get started with Actions
 
-# Event triggers on pull request event
-# For more detail visit https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#on
+name: CI
+
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
-# The jobs this action will run. You can write as many jobs as you want.
-# For more detail on this section visit https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs
+
+  workflow_dispatch:
+
 jobs:
-   run-jest-tests:
-    runs-on: ubunt-latest
-    # Steps this job must take to complete
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up NodeJS
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - name: Install all dependencies
-        run: yarn install
-      - name: Run Jest Tests
-        run: yarn tests    
+      - name: test 
+        run: |
+          cd server
+          yarn
+          yarn test
+
+ 
