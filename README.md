@@ -34,7 +34,7 @@ As dicas são as seguintes:
 
 ## Como Testar
 
-O programa é compátivel apenas com distribuições baseadas em Debian.
+O programa é compatível apenas com distribuições baseadas em Debian.
 
 Para colocar em produção utilize o seguinte comando da pasta raiz do projeto. 
 
